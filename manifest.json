@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Notion Custom Themes",
+    "version": "1.0",
+    "author": "Misha Reyes",
+    "description": "Customize your Notion experience with custom themes!",
+    "permissions": ["storage"],
+    "icons": {
+        "16": "images/icon-16.png"
+    },
+    "action": {
+        "default_icon": "images/icon-16.png",
+        "default_title": "Change the webpage color",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "js": ["scripts/content.js"],
+          "matches": ["*://*.notion.so/*", "*://*.notion.site/*"]
+        }
+    ]
+  }
